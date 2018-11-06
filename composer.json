@@ -1,0 +1,17 @@
+{
+    "name": "netpeak-talks/di-container",
+    "description": "Example DI-container for Netpeak Talks",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Maystrenko",
+            "email": "doctor.netpeak@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

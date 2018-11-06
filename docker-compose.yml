@@ -1,0 +1,16 @@
+version: '2'
+services:
+    php:
+        build: .
+        volumes:
+            - .:/code
+            - ~/.ssh/id_rsa:/root/.ssh/id_rsa
+        ports:
+            - "9001:9000"
+        container_name: 'php_di_container'
+        environment:
+            XDEBUG_CONFIG: "remote_host=172.17.0.1" # for macOS IP 10.254.254.254
+            DOCKER_HOST: "tcp://localhost:4243"
+            PHP_IDE_CONFIG: "serverName=docker"
+        networks:
+            - default
